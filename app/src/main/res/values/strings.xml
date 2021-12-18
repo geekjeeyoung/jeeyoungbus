@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">jeeyoungbus</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_history">History</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="change_ticket_price">Change the price of each ticket</string>
+    <string name="single_journey_ticket">Single Journey Ticket</string>
+    <string name="day_ticket">Day Ticket</string>
+    <string name="week_ticket">Week Ticket</string>
+    <string name="save">S A V E</string>
+    <string name="change_ticket_price_1">Change The Price</string>
+    <string name="change_ticket_price_2">Of Each Ticket</string>
 </resources>

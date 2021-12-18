@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- normal 12sp -->
+    <style name="Text.Roboto.Normal.12sp" parent="Text.Roboto.Normal">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Black" parent="Text.Roboto.Normal.12sp">
+    </style>
+    <style name="Text.Roboto.Normal.12sp.LightBlack" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.LightGray" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Gray" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Input_border_color" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/input_border_color</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Orange" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.White" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Blue" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Normal.12sp.Red" parent="Text.Roboto.Normal.12sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- // normal 12sp -->
+
+    <!-- bold 12sp -->
+    <style name="Text.Roboto.Bold.12sp" parent="Text.Roboto.Bold">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Black" parent="Text.Roboto.Bold.12sp">
+    </style>
+    <style name="Text.Roboto.Bold.12sp.LightBlack" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.LightGray" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Gray" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Input_border_color" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/input_border_color</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Orange" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.White" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Blue" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Bold.12sp.Red" parent="Text.Roboto.Bold.12sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- //bold 12sp -->
+</resources>

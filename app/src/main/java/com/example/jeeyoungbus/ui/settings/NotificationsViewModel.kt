@@ -1,4 +1,4 @@
-package com.example.jeeyoungbus.ui.notifications
+package com.example.jeeyoungbus.ui.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- normal 18sp -->
+    <style name="Text.Roboto.Normal.18sp" parent="Text.Roboto.Normal">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.Black" parent="Text.Roboto.Normal.18sp">
+    </style>
+    <style name="Text.Roboto.Normal.18sp.LightBlack" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.LightGray" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.Gray" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.Orange" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.White" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.Blue" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Normal.18sp.Red" parent="Text.Roboto.Normal.18sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- // normal 18sp -->
+
+    <!-- bold 18sp -->
+    <style name="Text.Roboto.Bold.18sp" parent="Text.Roboto.Bold">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.Black" parent="Text.Roboto.Bold.18sp">
+    </style>
+    <style name="Text.Roboto.Bold.18sp.LightBlack" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.LightGray" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.Gray" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.Orange" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.White" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.Blue" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Bold.18sp.Red" parent="Text.Roboto.Bold.18sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- //bold 18sp -->
+</resources>

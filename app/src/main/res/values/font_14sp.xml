@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- normal 14sp -->
+    <style name="Text.Roboto.Normal.14sp" parent="Text.Roboto.Normal">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.Black" parent="Text.Roboto.Normal.14sp">
+    </style>
+    <style name="Text.Roboto.Normal.14sp.LightBlack" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.LightGray" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.Gray" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.Orange" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.White" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.Blue" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Normal.14sp.Red" parent="Text.Roboto.Normal.14sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- // normal 14sp -->
+
+    <!-- bold 14sp -->
+    <style name="Text.Roboto.Bold.14sp" parent="Text.Roboto.Bold">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.Black" parent="Text.Roboto.Bold.14sp">
+    </style>
+    <style name="Text.Roboto.Bold.14sp.LightBlack" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.LightGray" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.Gray" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.Orange" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.White" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.Blue" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="Text.Roboto.Bold.14sp.Red" parent="Text.Roboto.Bold.14sp">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!-- //bold 14sp -->
+</resources>
