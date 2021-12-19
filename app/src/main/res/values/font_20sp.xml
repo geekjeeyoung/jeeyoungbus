@@ -27,6 +27,9 @@
     <style name="Text.Roboto.Normal.20sp.Red" parent="Text.Roboto.Normal.20sp">
         <item name="android:textColor">@color/red</item>
     </style>
+    <style name="Text.Roboto.Normal.20sp.Purple" parent="Text.Roboto.Normal.20sp">
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
     <!-- // normal 20sp -->
 
     <!-- bold 20sp -->
@@ -55,6 +58,9 @@
     </style>
     <style name="Text.Roboto.Bold.20sp.Red" parent="Text.Roboto.Bold.20sp">
         <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="Text.Roboto.Bold.20sp.Purple" parent="Text.Roboto.Bold.20sp">
+        <item name="android:textColor">@color/purple_500</item>
     </style>
     <!-- // bold 20sp -->
 </resources>
