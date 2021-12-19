@@ -22,4 +22,6 @@
     <string name="default_quantity">0</string>
     <string name="quantity">Quantity :</string>
     <string name="sell">S E L L</string>
+    <string name="check_history_1">CHECK YOUR</string>
+    <string name="check_history_2">SALES HISTORY</string>
 </resources>

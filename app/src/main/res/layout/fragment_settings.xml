@@ -1,333 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.settings.SettingsFragment">
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="60dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_euro" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/Text.Roboto.Bold.18sp.Gray"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/change_ticket_price_1" />
-
-                    <TextView
-                        style="@style/Text.Roboto.Bold.20sp.Orange"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/change_ticket_price_2" />
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Text.Roboto.Bold.18sp.Gray"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/change_ticket_price_3" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginBottom="40dp"
-            android:src="@drawable/ic_long_arrow_right" />
+        android:layout_height="match_parent">
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:overScrollMode="never">
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/dotted_line_horizontal"
-                    android:layerType="software" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="12dp">
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_euro" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_sale" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="10dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/Text.Roboto.Normal.16sp.Black"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/single_journey_ticket" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
                             android:orientation="horizontal">
 
-                            <androidx.appcompat.widget.AppCompatEditText
-                                style="@style/Text.Roboto.Bold.26sp.Orange"
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="10dp"
-                                android:background="@drawable/et_bg"
-                                android:ellipsize="end"
-                                android:gravity="center"
-                                android:inputType="numberDecimal"
-                                android:padding="15dp"
-                                android:text="@string/price_single_journey_ticket"
-                                android:textAlignment="center"
-                                android:textCursorDrawable="@drawable/color_cursor" />
-
                             <TextView
-                                style="@style/Text.Roboto.Bold.26sp.Gray"
+                                style="@style/Text.Roboto.Bold.18sp.Gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:text="€" />
+                                android:text="@string/change_ticket_price_1" />
+
+                            <TextView
+                                style="@style/Text.Roboto.Bold.20sp.Orange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text="@string/change_ticket_price_2" />
                         </LinearLayout>
 
-
+                        <TextView
+                            style="@style/Text.Roboto.Bold.18sp.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/change_ticket_price_3" />
                     </LinearLayout>
+
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/dotted_line_horizontal"
-                    android:layerType="software" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="12dp">
+                    android:layout_marginStart="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:src="@drawable/ic_long_arrow_right" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_service" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/Text.Roboto.Normal.16sp.Black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/day_ticket" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatEditText
-                                style="@style/Text.Roboto.Bold.26sp.Orange"
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="10dp"
-                                android:background="@drawable/et_bg"
-                                android:ellipsize="end"
-                                android:gravity="center"
-                                android:inputType="numberDecimal"
-                                android:padding="15dp"
-                                android:text="@string/price_day_ticket"
-                                android:textAlignment="center"
-                                android:textCursorDrawable="@drawable/color_cursor" />
-
-                            <TextView
-                                style="@style/Text.Roboto.Bold.26sp.Gray"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:text="€" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/dotted_line_horizontal"
-                    android:layerType="software" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="12dp">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_delivery" />
-                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/dotted_line_horizontal"
+                        android:layerType="software" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="12dp">
 
-                        <TextView
-                            android:id="@+id/tvSector1Title"
-                            style="@style/Text.Roboto.Normal.16sp.Black"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/week_ticket" />
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_sale" />
+                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatEditText
-                                style="@style/Text.Roboto.Bold.26sp.Orange"
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="10dp"
-                                android:background="@drawable/et_bg"
-                                android:ellipsize="end"
-                                android:gravity="center"
-                                android:inputType="numberDecimal"
-                                android:padding="15dp"
-                                android:text="@string/price_week_ticket"
-                                android:textAlignment="center"
-                                android:textCursorDrawable="@drawable/color_cursor" />
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical">
 
                             <TextView
-                                style="@style/Text.Roboto.Bold.26sp.Gray"
+                                style="@style/Text.Roboto.Normal.16sp.Black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:text="€" />
+                                android:text="@string/single_journey_ticket" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_single_journey_ticket_price"
+                                    style="@style/Text.Roboto.Bold.26sp.Orange"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/et_bg"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="8"
+                                    android:padding="15dp"
+                                    android:textAlignment="center"
+                                    android:textCursorDrawable="@drawable/color_cursor" />
+
+                                <TextView
+                                    style="@style/Text.Roboto.Bold.26sp.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="€" />
+                            </LinearLayout>
+
+
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-                <View
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/dotted_line_horizontal"
+                        android:layerType="software" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="12dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_service" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Text.Roboto.Normal.16sp.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/day_ticket" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_day_ticket_price"
+                                    style="@style/Text.Roboto.Bold.26sp.Orange"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/et_bg"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="8"
+                                    android:padding="15dp"
+                                    android:textAlignment="center"
+                                    android:textCursorDrawable="@drawable/color_cursor" />
+
+                                <TextView
+                                    style="@style/Text.Roboto.Bold.26sp.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="€" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/dotted_line_horizontal"
+                        android:layerType="software" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="12dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_delivery" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvSector1Title"
+                                style="@style/Text.Roboto.Normal.16sp.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/week_ticket" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_week_ticket_price"
+                                    style="@style/Text.Roboto.Bold.26sp.Orange"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/et_bg"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="8"
+                                    android:padding="15dp"
+                                    android:textAlignment="center"
+                                    android:textCursorDrawable="@drawable/color_cursor" />
+
+                                <TextView
+                                    style="@style/Text.Roboto.Bold.26sp.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="€" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/dotted_line_horizontal"
+                        android:layerType="software" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <Button
+                    android:id="@+id/btn_change"
+                    style="@style/button_black"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="60dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/dotted_line_horizontal"
-                    android:layerType="software" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/change"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </ScrollView>
 
-        <Button
-            style="@style/button_black"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/change"
-            android:textSize="16sp" />
-    </LinearLayout>
-    </ScrollView>
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:indeterminateTint="@color/orange"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

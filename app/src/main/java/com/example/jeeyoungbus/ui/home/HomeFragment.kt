@@ -31,10 +31,17 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-
-        })
+        homeViewModel.apply {
+            singleJourneyTicketPrice.observe(viewLifecycleOwner, {
+                binding.tvSingleJourneyTicketPrice.text = it
+            })
+            dayTicketPrice.observe(viewLifecycleOwner, {
+                binding.tvDayTickeyPrice.text = it
+            })
+            weekTicketPrice.observe(viewLifecycleOwner, {
+                binding.tvWeekTicketPrice.text = it
+            })
+        }
         return root
     }
 

@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/drawable/ic_delivery_blue.xml" value="0.253125" />
         <entry key="app/src/main/res/drawable/ic_euro.xml" value="0.253125" />
         <entry key="app/src/main/res/drawable/ic_history.xml" value="0.253125" />
+        <entry key="app/src/main/res/drawable/ic_history_paper.xml" value="0.253125" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.14814814814814814" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2722222222222222" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.253125" />
@@ -36,9 +37,10 @@
         <entry key="app/src/main/res/font/font.xml" value="0.2671875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
