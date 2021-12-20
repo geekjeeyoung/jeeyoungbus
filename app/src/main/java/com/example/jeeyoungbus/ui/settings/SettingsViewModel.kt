@@ -5,13 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.jeeyoungbus.BusApp
-import java.text.NumberFormat
-import java.text.ParseException
 import java.util.*
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 import kotlin.concurrent.timerTask
-import kotlin.math.sin
 
 class SettingsViewModel : ViewModel() {
 
@@ -50,10 +45,11 @@ class SettingsViewModel : ViewModel() {
 
 
     fun onChangeClicked(single: String, day: String, week: String) {
-        val regex = Regex("[0-9]+?.[0-9]*")
+        val regex = Regex("[0-9]+?.?[0-9]*")
         val result = arrayOf(single, day, week).map {
             if (regex.matches(it) && !it.startsWith("00")) it else null
         }
+        Log.i("REGEX", result.toString())
         if (result.contains(null)) {
             setShowToast(true to "Please enter the correct price")
         } else {

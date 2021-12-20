@@ -24,4 +24,6 @@
     <string name="sell">S E L L</string>
     <string name="check_history_1">CHECK YOUR</string>
     <string name="check_history_2">SALES HISTORY</string>
+    <string name="gty">Qty</string>
+    <string name="sum">SUM :</string>
 </resources>

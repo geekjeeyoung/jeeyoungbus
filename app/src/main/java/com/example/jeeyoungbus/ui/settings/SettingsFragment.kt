@@ -8,7 +8,6 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.jeeyoungbus.BusApp
 import com.example.jeeyoungbus.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -24,10 +23,14 @@ class SettingsFragment : Fragment() {
     ): View? {
         settingsViewModel =
             ViewModelProvider(this).get(SettingsViewModel::class.java)
-
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        setupViewModel()
+        setupView()
+        return root
+    }
 
+    private fun setupViewModel() {
         settingsViewModel.apply {
             singleJourneyTicketPrice.observe(viewLifecycleOwner, {
                 binding.etSingleJourneyTicketPrice.setText(it)
@@ -51,7 +54,9 @@ class SettingsFragment : Fragment() {
                 }
             })
         }
+    }
 
+    private fun setupView() {
         binding.btnChange.setOnClickListener {
             settingsViewModel.onChangeClicked(
                 binding.etSingleJourneyTicketPrice.text.toString(),
@@ -59,8 +64,6 @@ class SettingsFragment : Fragment() {
                 binding.etWeekTicketPrice.text.toString()
             )
         }
-
-        return root
     }
 
     override fun onDestroyView() {
