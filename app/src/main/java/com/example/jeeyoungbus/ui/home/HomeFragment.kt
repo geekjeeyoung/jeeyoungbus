@@ -2,6 +2,7 @@ package com.example.jeeyoungbus.ui.home
 
 import android.os.Bundle
 import android.text.InputFilter
+import android.text.InputFilter.LengthFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -52,6 +53,13 @@ class HomeFragment : Fragment() {
             sumPrice.observe(viewLifecycleOwner, {
                 binding.tvSumPrice.text = it
             })
+            showLoadingPb.observe(viewLifecycleOwner, {
+                if (it) {
+                    binding.pbLoading.visibility = View.VISIBLE
+                } else {
+                    binding.pbLoading.visibility = View.GONE
+                }
+            })
         }
     }
 
@@ -65,12 +73,15 @@ class HomeFragment : Fragment() {
             }
             null
         }
-
-        val filters = arrayOf(filterNonDigit)
+        val filterLength: InputFilter = LengthFilter(6)
+        val filters = arrayOf(filterNonDigit, filterLength)
         binding.apply {
             etSingleJourneyQty.filters = filters
             etDayTicketQty.filters = filters
             etWeekTicketQty.filters = filters
+            btnSell.setOnClickListener {
+                homeViewModel.onSellClicked()
+            }
         }
     }
 

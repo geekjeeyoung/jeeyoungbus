@@ -43,9 +43,8 @@ class SettingsViewModel : ViewModel() {
         _showToast.postValue(pair)
     }
 
-
     fun onChangeClicked(single: String, day: String, week: String) {
-        val regex = Regex("[0-9]+?.?[0-9]*")
+        val regex = Regex("^\$|^[0-9]([.]\\d{0,6})?\$|^[1-9][0-9]*([.]\\d{0,6})?\$")
         val result = arrayOf(single, day, week).map {
             if (regex.matches(it) && !it.startsWith("00")) it else null
         }

@@ -1,8 +1,14 @@
 package com.example.jeeyoungbus.ui.home
 
-import android.provider.MediaStore
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.jeeyoungbus.BusApp
+import com.example.jeeyoungbus.network.RetrofitClass
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeViewModel : ViewModel() {
 
@@ -64,21 +70,36 @@ class HomeViewModel : ViewModel() {
         get() = MediatorLiveData<Boolean>().apply {
             addSource(singleJourneyQty) {
                 this.value =
-                    it.isNotBlank() && !dayQty.value.isNullOrBlank() && !weekQty.value.isNullOrBlank() && !sumPrice.value.equals("0.00")
+                    it.isNotBlank() && !dayQty.value.isNullOrBlank() && !weekQty.value.isNullOrBlank() && !sumPrice.value.equals(
+                        "0.00"
+                    )
             }
             addSource(dayQty) {
                 this.value =
-                    it.isNotBlank() && !singleJourneyQty.value.isNullOrBlank() && !weekQty.value.isNullOrBlank() && !sumPrice.value.equals("0.00")
+                    it.isNotBlank() && !singleJourneyQty.value.isNullOrBlank() && !weekQty.value.isNullOrBlank() && !sumPrice.value.equals(
+                        "0.00"
+                    )
             }
             addSource(weekQty) {
                 this.value =
-                    it.isNotBlank() && !singleJourneyQty.value.isNullOrBlank() && !dayQty.value.isNullOrBlank() && !sumPrice.value.equals("0.00")
+                    it.isNotBlank() && !singleJourneyQty.value.isNullOrBlank() && !dayQty.value.isNullOrBlank() && !sumPrice.value.equals(
+                        "0.00"
+                    )
             }
             addSource(sumPrice) {
                 this.value =
                     !it.equals("0.00") && !singleJourneyQty.value.isNullOrBlank() && !dayQty.value.isNullOrBlank() && !weekQty.value.isNullOrBlank()
             }
         }
+
+    private val _showLoadingPb = MutableLiveData<Boolean>().apply {
+        value = false
+    }
+    val showLoadingPb: LiveData<Boolean> = _showLoadingPb
+
+    private fun setShowLoading(boolean: Boolean) {
+        _showLoadingPb.postValue(boolean)
+    }
 
     private fun getSumPrice(singleJourneyQty: String, dayQty: String, weekQty: String): String {
         val singleJourneySum: Float =
@@ -94,5 +115,27 @@ class HomeViewModel : ViewModel() {
         } else {
             qty.toFloat()
         }
+    }
+
+    fun onSellClicked() {
+        setShowLoading(true)
+        val callPostNewTransaction = RetrofitClass.api.postNewTransaction()
+        callPostNewTransaction.enqueue(object : Callback<Any> {
+            override fun onResponse(call: Call<Any>, response: Response<Any>) {
+//                if(response.isSuccessful()) { // <--> response.code == 200
+//                    // 성공 처리
+//
+//                    //ex)
+//                    Toast.makeText(this, "${response.body().student.size}", Toast.LENGTH_SHORT).show()
+//                } else { // code == 400
+//                    // 실패 처리
+//                }
+            }
+
+            override fun onFailure(call: Call<Any>, t: Throwable) {
+                // code == 500
+                // 실패 처리
+            }
+        })
     }
 }
