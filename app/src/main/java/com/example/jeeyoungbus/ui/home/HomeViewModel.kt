@@ -12,7 +12,7 @@ import retrofit2.Response
 
 class HomeViewModel : ViewModel() {
 
-    private val defaultQty = "0"
+    val defaultQty = "0"
 
     private val _singleJourneyTicketPrice = MutableLiveData<String>().apply {
         value = BusApp.prefs.singleJourneyTicketPrice
@@ -41,30 +41,29 @@ class HomeViewModel : ViewModel() {
         value = defaultQty
     }
 
-    val sumPrice: LiveData<String>
-        get() = MediatorLiveData<String>().apply {
-            addSource(singleJourneyQty) {
-                this.value = getSumPrice(
-                    it,
-                    dayQty.value!!,
-                    weekQty.value!!
-                )
-            }
-            addSource(dayQty) {
-                this.value = getSumPrice(
-                    singleJourneyQty.value!!,
-                    it,
-                    weekQty.value!!
-                )
-            }
-            addSource(weekQty) {
-                this.value = getSumPrice(
-                    singleJourneyQty.value!!,
-                    dayQty.value!!,
-                    it
-                )
-            }
+    val sumPrice: LiveData<String> = MediatorLiveData<String>().apply {
+        addSource(singleJourneyQty) {
+            this.value = getSumPrice(
+                it,
+                dayQty.value!!,
+                weekQty.value!!
+            )
         }
+        addSource(dayQty) {
+            this.value = getSumPrice(
+                singleJourneyQty.value!!,
+                it,
+                weekQty.value!!
+            )
+        }
+        addSource(weekQty) {
+            this.value = getSumPrice(
+                singleJourneyQty.value!!,
+                dayQty.value!!,
+                it
+            )
+        }
+    }
 
     val formFilled: LiveData<Boolean>
         get() = MediatorLiveData<Boolean>().apply {
@@ -115,27 +114,5 @@ class HomeViewModel : ViewModel() {
         } else {
             qty.toFloat()
         }
-    }
-
-    fun onSellClicked() {
-        setShowLoading(true)
-        val callPostNewTransaction = RetrofitClass.api.postNewTransaction()
-        callPostNewTransaction.enqueue(object : Callback<Any> {
-            override fun onResponse(call: Call<Any>, response: Response<Any>) {
-//                if(response.isSuccessful()) { // <--> response.code == 200
-//                    // 성공 처리
-//
-//                    //ex)
-//                    Toast.makeText(this, "${response.body().student.size}", Toast.LENGTH_SHORT).show()
-//                } else { // code == 400
-//                    // 실패 처리
-//                }
-            }
-
-            override fun onFailure(call: Call<Any>, t: Throwable) {
-                // code == 500
-                // 실패 처리
-            }
-        })
     }
 }

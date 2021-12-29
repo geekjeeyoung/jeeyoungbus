@@ -26,4 +26,7 @@
     <string name="check_history_2">SALES HISTORY</string>
     <string name="gty">Qty</string>
     <string name="sum">SUM :</string>
+    <string name="yavin_payment">YAVIN PAYMENT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="confirm">CONFIRM</string>
 </resources>
