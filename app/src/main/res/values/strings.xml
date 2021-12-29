@@ -29,4 +29,5 @@
     <string name="yavin_payment">YAVIN PAYMENT</string>
     <string name="cancel">CANCEL</string>
     <string name="confirm">CONFIRM</string>
+    <string name="ok">OK</string>
 </resources>

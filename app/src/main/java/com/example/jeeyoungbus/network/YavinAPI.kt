@@ -6,7 +6,7 @@ import retrofit2.http.POST
 
 interface YavinAPI {
     @GET("api/transactions")
-    fun extractAllTransctions()
+    fun extractAllTransctions() : Call<Any>
 
     @POST("api/v1/pos/payment/new/")
     fun postNewTransaction() : Call<Any>

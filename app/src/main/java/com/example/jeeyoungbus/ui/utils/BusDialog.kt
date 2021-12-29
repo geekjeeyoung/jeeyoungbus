@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import com.example.jeeyoungbus.R
 import com.example.jeeyoungbus.databinding.DialogAlertPaymentBinding
 
 class BusDialog {
@@ -42,6 +43,7 @@ class BusDialog {
             if (isResult) {
                 ivCloseBtn.visibility = View.INVISIBLE
                 tvDialogCancel.visibility = View.INVISIBLE
+                tvDialogConfirm.text = context.getString(R.string.ok)
             } else {
                 ivCloseBtn.setOnClickListener {
                     dialog.dismiss()
